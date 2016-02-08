@@ -6,7 +6,7 @@
   },
   "autoload": {
     "psr-4": {
-      "NineCells\\Dev\\Log": ""
+      "NineCells\\Dev\\Log\\": ""
     }
   },
   "minimum-stability": "dev"

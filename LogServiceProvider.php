@@ -23,5 +23,6 @@ class LogServiceProvider extends ServiceProvider
          * @param bool        $useShortAttachment     Whether the the context/extra messages added to Slack as attachments are in a short style
          * @param bool        $includeContextAndExtra Whether the attachment should include context and extra data
          */
+
     }
 }
