@@ -12,6 +12,10 @@ class LogServiceProvider extends ServiceProvider
             __DIR__ . '/resources/config/ninecells/log.php' => config_path('ninecells/log.php'),
         ]);
 
+    }
+
+    public function register()
+    {
         if (config('ninecells.log.useSlack', false)) {
             with(\Log::getMonolog())->pushHandler(new \Monolog\Handler\SlackHandler(
                 config('ninecells.log.slack.token'),
@@ -22,9 +26,5 @@ class LogServiceProvider extends ServiceProvider
                 config('ninecells.log.slack.level')
             ));
         }
-    }
-
-    public function register()
-    {
     }
 }
